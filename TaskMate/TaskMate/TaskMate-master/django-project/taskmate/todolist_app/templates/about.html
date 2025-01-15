@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+     <title>About Us - Taskmate</title>
+{% endblock title %}
+
+{% block content %} 
+
+  <div class="container">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <style>
+            /* Scoped styles for the About Us page */
+            .about-container {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background-color: #f4f4f9;
+                padding: 20px;
+            }
+    
+            .about-container h1, .about-container h2 {
+                text-align: center;
+                color: #444;
+            }
+    
+            .about-container h1 {
+                margin-top: 30px;
+            }
+    
+            .about-section {
+                margin: 20px auto;
+                max-width: 800px;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .about-container p, .about-container li {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+    
+            .about-container ul {
+                list-style: none;
+                padding: 0;
+            }
+    
+            .about-container ul li {
+                background-color: #eaf7f8;
+                color: #222;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                transition: all 0.3s;
+            }
+    
+            .about-container ul li:hover {
+                background-color: #d4f0f1;
+            }
+    
+            .about-container .footer {
+                text-align: center;
+                padding: 10px;
+                background-color: #007b8f;
+                color: #fff;
+                margin-top: 30px;
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .about-container {
+                    padding: 10px;
+                }
+    
+                .about-section {
+                    margin: 10px;
+                    padding: 15px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Menu -->
+        <nav>
+            <!-- Ensure your navigation styles are unaffected -->
+            <!-- Existing nav menu code here -->
+        </nav>
+    
+        <!-- About Us Content -->
+        <div class="about-container">
+          <h1 style="text-align: center; color: rgb(32, 98, 219);">About {{ company_name }}</h1>
+    
+            <section class="about-section">
+                <h2>Our Mission</h2>
+                <p>{{ mission }}</p>
+            </section>
+    
+            <section class="about-section">
+                <h2>Our Vision</h2>
+                <p>{{ vision }}</p>
+            </section>
+    
+            <section class=" about-section">
+                <h2>Our Core Values</h2>
+                <ul>
+                    {% for value in values %}
+                        <li>{{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+    
+            <div class="footer">
+                © {{ 2025 }} {{ TaskMate }}. All Rights Reserved.
+            </div>
+        </div>
+    </body>
+    </html>
+    
+     
+{% endblock content %}

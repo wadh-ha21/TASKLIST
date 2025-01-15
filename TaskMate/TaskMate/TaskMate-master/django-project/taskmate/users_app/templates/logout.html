@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>Logged Out - Taskmate</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container" style="text-align: center; padding: 50px; background: #ffffff; color: #333; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); margin-top: 80px;">
+    <h1 style="font-family: 'Arial', sans-serif; font-size: 36px; font-weight: bold; margin: 0; color: #4CAF50;">
+        You’ve Successfully Logged Out of Taskmate
+    </h1>
+    <p style="font-family: 'Arial', sans-serif; font-size: 18px; margin-top: 20px; line-height: 1.6;">
+        We're sad to see you go, but we look forward to your return. Thank you for being a part of our journey!<br>
+        Feel free to come back anytime!
+    </p>
+</div>
+{% endblock content %}
