@@ -1,10 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import CustomRegisterForm
 from django.contrib import messages
-
 from django.contrib.auth import logout
-
-
 
 
 
@@ -24,6 +21,7 @@ def register(request):
 def custom_logout(request):
    logout(request)
    return render(request,'logout.html')
+
 
 
 

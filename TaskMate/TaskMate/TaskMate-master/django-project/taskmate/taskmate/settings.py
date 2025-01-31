@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'todolist_app',
+    'rest_framework',
     'users_app',
     'crispy_forms',
     'crispy_bootstrap4',
